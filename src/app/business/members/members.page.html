@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Staff members</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-item>
+    <ion-avatar slot="start">
+      <img src="assets/avatar.png">
+    </ion-avatar>
+  </ion-item> -->
+
+  <ion-card *ngFor="let item of staffmember">
+    <ion-card-content>
+    
+        <ion-badge color="warning">Staff</ion-badge>
+        <ion-avatar slot="start">
+          <img src="assets/avatar.png">
+        </ion-avatar>
+      <ion-item>
+        <ion-label>StaffName: {{item.staffName}} </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>WorkTime: {{item.worktime}} </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>phone: {{item.phone}} </ion-label>
+      </ion-item>  
+      <!-- <ion-item>
+        <ion-label>service: {{item.service}} </ion-label>
+      </ion-item> -->
+  
+    </ion-card-content>
+  </ion-card>
+</ion-content>

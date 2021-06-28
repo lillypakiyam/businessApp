@@ -1,0 +1,101 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title style="color: white;" class="ion-text-center">staff</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="!staffmb">
+            <ion-slides pager="false" #slides [options]="slideOpts">
+                <ion-slide *ngFor="let staf of api.staffs">
+                        <ion-card>
+                            <ion-card-content>
+                                <!-- <div>
+                                    <ion-icon name="ellipsis-vertical" style="color: white; font-size: 30px; padding-left: 60px;" (click)="delete()"></ion-icon>
+                                </div> -->
+                        <!-- <ion-badge color="warning">Staff</ion-badge> -->
+                        <ion-avatar slot="start" class="avatar" style="margin-left: 60px;">
+                            <img src="assets/avatar.png">
+                        </ion-avatar>
+                         <div>
+                             <ion-label style="font-size: larger; color: white;"><b> {{staf.staffName}}</b> </ion-label>
+                         </div>
+                         <div>
+                             <ion-label style="font-size: medium; color: white;"> {{staf.phone}} </ion-label>
+                         </div>
+                        <div>
+                            <ion-label style="font-size: medium; color: white;"> {{staf.worktime}} </ion-label>
+                        </div>
+                        <div>
+                            <ion-label style="font-size: medium; color: white;"><li>{{staf.service}}</li></ion-label>
+                        </div>
+                    </ion-card-content>
+                   </ion-card>
+                 </ion-slide>
+            </ion-slides>
+    
+    </div>
+    <div *ngIf="staffmb">
+        <div class="avatar">
+            <ion-avatar>
+                <img src="assets/avatar.png">
+            </ion-avatar>
+        </div>
+
+        <div class="staffInput">
+            <ion-item lines="none">
+                <ion-input [(ngModel)]="staff.staffname" placeholder="Enter staff Name" clearInput></ion-input>
+            </ion-item>
+        </div>
+
+        <div class="staffInputnumber">
+            <ion-item lines="none">
+                <ion-input (click)="Durationtime()" style="margin-left: 50px;" [(ngModel)]="staff.worktime">
+                    {{value0}}
+                </ion-input>
+            </ion-item>
+        </div>
+
+        <div class="staffInputnumber">
+            <ion-item>
+                <!-- <ion-label>Services</ion-label> -->
+                <ion-select Multiple="true" [(ngModel)]="staff.service" placeholder="Services">
+                    <ion-list *ngFor="let serv of api.service1list">
+                        <div *ngFor="let item of serv.services">
+                            <div *ngFor="let s of item.services">
+                            <ion-item>
+                            <ion-select-option [value]="s.service">{{s.service}}</ion-select-option>
+                            <!-- <ion-label>{{s.service}}</ion-label> -->
+                        </ion-item>
+                    </div>
+                    </div>
+                    </ion-list>
+                    <ion-list *ngFor="let item of api.servicelist">
+                        <ion-item>
+                            <ion-select-option [value]="item.ServiceName">{{item.ServiceName}}</ion-select-option>
+                            <ion-label>{{item.ServiceName}}</ion-label>
+                        </ion-item>
+                    </ion-list>
+                </ion-select>
+            </ion-item>
+        </div>
+
+        <div class="staffInputnumber">
+            <ion-item lines="none">
+                <ion-input type="number" [(ngModel)]="staff.phone" placeholder="Enter phone number" clearInput>
+                </ion-input>
+            </ion-item>
+        </div>
+        <ion-button style="width: 250px; padding-left: 100px; " shape="round" expand="block" class=" align-items-center" (click)="getStaffDetails()">
+            Save
+        </ion-button>
+    </div>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button (click)="staffHideForm()">
+            <ion-icon name="add" *ngIf="!staffmb"></ion-icon>
+            <ion-icon name="close" *ngIf="staffmb"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+</ion-content>

@@ -1,0 +1,721 @@
+<ion-content class="">
+    <ion-slides pager="true" #slides [options]="slideOpts">
+        <ion-slide class="welcomeTitle">
+            <ion-content>
+                <div class="img">
+                    <img src="assets/wel.png" alt="saloon-logo">
+                </div>
+                    <p class="suc">You've logged in successfully</p>
+            </ion-content>
+
+            <ion-footer class="ion-no-border">
+                <div class="nextbutton">
+                    <ion-button type="button" fill="clear" (click)="slides.slideNext()">Next
+                        <ion-icon name="chevron-forward"></ion-icon>
+                    </ion-button>
+                </div>
+            </ion-footer>
+        </ion-slide>
+
+
+        <ion-slide class="welcomeTitle">
+            <ion-content>
+                <ion-card class="register">
+                     <label class="register">Registration</label>
+                    <div>
+                        <ion-label position="floating"  class="note">Please add your Shop Name</ion-label>
+                        <!-- <ion-note>This Business name will be displayed to your customers</ion-note> -->
+                    </div>
+                    <div class="img2">
+                        <img src="assets/business.png" alt="business-logo">
+                    </div>
+                    <div class="BName">
+                        <ion-input class="form-control" style="width: 45vh;" placeholder="Enter Shop Name" [(ngModel)]="user.businessname" type="text"></ion-input>
+                    </div>
+                </ion-card>
+            </ion-content>
+            <ion-footer class="ion-no-border">
+                <div class="next">
+                    <ion-button fill="clear" slot="start" (click)="slides.slidePrev()">
+                        <ion-icon name="chevron-back"></ion-icon>prev
+                    </ion-button>
+                    <ion-button fill="clear" slot="end" [disabled]="user.businessname.length === 0" (click)="slides.slideNext()">Next
+                        <ion-icon name="chevron-forward"></ion-icon>
+                    </ion-button>
+                </div>
+            </ion-footer>
+        </ion-slide>
+
+
+        <ion-slide style="width: 310;">
+            <ion-content>
+                <ion-card class="register">
+                        <ion-label position="floating" class="greenColor headSize">
+                            Please add your Name
+                        </ion-label>
+                    <div class="img2">
+                        <img src="assets/profile.png" alt="profile-logo">
+                    </div>
+                    <div class="BName">
+                        <ion-input position="floating" class="form-control" style="width: 45vh;" placeholder="Enter your Name" [(ngModel)]="user.name" type="text"></ion-input>
+                    </div>
+            
+            </ion-card>
+            </ion-content>
+            <ion-footer class="ion-no-border">
+                <div class="next">
+                    <ion-button fill="clear" slot="start" (click)="slides.slidePrev()">
+                        <ion-icon name="chevron-back"></ion-icon>prev
+                    </ion-button>
+                    <ion-button fill="clear" slot="end" [disabled]="user.name.length === 0" (click)="slides.slideNext()">Next
+                        <ion-icon name="chevron-forward"></ion-icon>
+                    </ion-button>
+                </div>
+            </ion-footer>
+        </ion-slide>
+
+       <!--mobile no-->
+       <ion-slide>
+        <ion-content>
+            <ion-card class="register">
+                <ion-card class="register">
+                <ion-label position="floating"  class="greenColor headSize">
+                    Please add your Mobile Numbers
+                </ion-label>
+        
+            <div class="img2">
+                <img src="assets/calling.png" alt="calling-logo">
+            </div>
+
+            <div >
+                <ion-label class="num"><ion-icon name="call" slot="start"></ion-icon>primary number : {{mobilenu.mobile}}</ion-label>
+            </div> 
+
+            <div class="BName">
+                <ion-input class="form-control" placeholder="secondary Number(Optional)" type="text" [(ngModel)]="user.phone">
+                <!-- [(ngModel)]="user.Email" -->
+                </ion-input>
+            <!-- </ion-item> -->
+            </div>
+            <div class="BName">
+                <ion-input class="form-control" placeholder="custom Number(Optional)" type="text" [(ngModel)]="user.phone2">
+                <!-- [(ngModel)]="user.Email" -->
+                </ion-input>
+            <!-- </ion-item> -->
+            </div>
+        </ion-card>
+    </ion-card>
+        </ion-content>
+        <ion-footer class="ion-no-border">
+            <div class="next">
+                <ion-button fill="clear" (click)="slides.slidePrev()" slot="start">
+                    <ion-icon name="chevron-back"></ion-icon>prev
+                </ion-button>
+                <ion-button fill="clear" (click)="phoneStorage(slides)" slot="end">Next
+                    <ion-icon name="chevron-forward"></ion-icon>
+                </ion-button>
+            </div>
+         </ion-footer>
+    </ion-slide>
+
+    <ion-slide>
+        <ion-content>
+            <ion-card class="register">
+                <ion-card class="register">
+            <ion-label position="floating" class="greenColor headSize">
+                    Please add your Email id
+                </ion-label>
+   
+            <div class="img2">
+                <img src="assets/emailid.png" alt="emailid-logo">
+            </div>
+            <div class="BName">
+                <ion-input class="form-control inputText" style="width: 45vh;" placeholder="Enter Email" [(ngModel)]="user.Email" type="text"></ion-input>
+            <!-- </ion-item> -->
+            </div>
+        </ion-card>
+    </ion-card>
+        </ion-content>
+        <ion-footer class="ion-no-border">    
+            <div class="">
+                <ion-button fill="clear" slot="start" (click)="slides.slidePrev()">
+                    <ion-icon name="chevron-back"></ion-icon>prev
+                </ion-button>
+                <ion-button fill="clear" slot="end" (click)="nxtEmail(slides)">Next
+                    <ion-icon name="chevron-forward"></ion-icon>
+                </ion-button>
+            </div>
+        </ion-footer>    
+    </ion-slide>
+
+<!--fb link-->
+    <ion-slide>
+        <ion-content>
+            <ion-card class="register">
+                <ion-card class="register">
+                <ion-label position="floating"  class="greenColor headSize">
+                    Please add your Public Profile Link(facebook/instagram)
+                </ion-label>
+            <!-- <ion-note>This Business name will be displayed to your customers</ion-note> -->
+            
+            <div class="img2">
+                <img src="assets/socialmedia.png" alt="socialmedia-logo">
+            </div>
+        <!-- <div>
+            <ion-icon name="logo-facebook"></ion-icon>
+        </div> -->
+            <div class="BName">
+                <ion-input class="form-control" placeholder="Enter facebook link" type="text">
+                <!-- [(ngModel)]="user.Email" -->
+                </ion-input>
+            <!-- </ion-item> -->
+            </div>
+            <div class="BName">
+                <ion-input class="form-control" placeholder="Enter instagram link" type="text">
+                <!-- [(ngModel)]="user.Email" -->
+                </ion-input>
+            <!-- </ion-item> -->
+            </div>
+            </ion-card>
+        </ion-card>
+        </ion-content>
+        <ion-footer class="ion-no-border">
+            <div class="next">
+                <ion-button fill="clear" slot="start" (click)="slides.slidePrev()">
+                    <ion-icon name="chevron-back"></ion-icon>prev
+                </ion-button>
+                <ion-button fill="clear" slot="end" (click)="slides.slideNext()">Next
+                    <ion-icon name="chevron-forward"></ion-icon>
+                </ion-button>
+            </div>
+        </ion-footer>
+    </ion-slide>
+
+        <!--Address Content-->
+        <ion-slide>
+            <ion-content [fullscreen]="true">
+                <ion-card class="cardAddress">
+                    <ion-grid class="">
+                        <ion-row class="ion-padding-bottom">
+                            <ion-col size="12">
+                                <ion-label class="greenColor headSize">Please search shop address</ion-label>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="12">
+                                <ion-searchbar placeholder="Search Address" class="input" inputmode="search" showCancelButton="never" [(ngModel)]="searchTerm" (ionInput)="searchPlace()" (ionCancel)="reset()" selected="true" autofocus>
+                                </ion-searchbar>
+                            </ion-col>
+                        </ion-row>
+                        <ion-label class="" *ngIf="autoCompleteItems.length === 0">
+                            <ion-img src="assets/Search.png"></ion-img>
+                        </ion-label>
+                        <ion-card *ngIf="autoCompleteItems && autoCompleteItems.length">
+                            <ion-list style="box-shadow: 0 0vh 3vh #bdbdbd!important;">
+                                <ion-item *ngFor="let item of autoCompleteItems" class="item-requset-ride" tappable (click)="itemSelected(item, slides)">
+                                    <ion-icon name="location" slot="start"></ion-icon>
+                                    <ion-label>
+                                        <p>{{item}}</p>
+                                    </ion-label>
+                                </ion-item>
+                            </ion-list>
+                        </ion-card>
+                    </ion-grid>
+                </ion-card>
+            </ion-content>
+            <ion-footer class="ion-padding-vertical ion-padding-horizontal ion-no-border">
+                <ion-button fill="outline" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase ion-padding-horizontal ">
+                    <ion-icon name="chevron-back"></ion-icon>Prev
+                </ion-button>
+                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="slides.slideNext()">
+                    <ion-icon name="add-sharp"></ion-icon> Address
+                </ion-button>
+            </ion-footer>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-content [fullscreen]="true">
+                <ion-card class="cardAddress">
+                    <ion-grid>
+                        <ion-row class="">
+                            <ion-col size="12">
+                                <ion-label class="greenColor headSize">Your Address</ion-label>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="ion-padding-bottom">
+                            <ion-col size="12">
+                                <ion-item lines="none">
+                                    <ion-label position="stacked" class="greenColor">Address</ion-label>
+                                    <ion-textarea class="typeText" rows="3" cols="5" [(ngModel)]="api.address">
+                                    </ion-textarea>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="12">
+                                <ion-item lines="none">
+                                    <ion-label position="stacked" class="greenColor">City</ion-label>
+                                    <ion-input type="text" class="typeText" [(ngModel)]="api.city"></ion-input>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="12">
+                                <ion-item lines="none">
+                                    <ion-label position="stacked" class="greenColor">Zipcode</ion-label>
+                                    <ion-input type="text" class="typeText" [(ngModel)]="api.zipcode"></ion-input>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card>
+            </ion-content>
+            <ion-footer class="ion-padding-vertical ion-padding-horizontal ion-no-border">
+                <ion-button fill="outline" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase ion-padding-horizontal ">
+                    <ion-icon name="chevron-back"></ion-icon>Prev
+                </ion-button>
+                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="editedAddress(slides)">
+                    Continue
+                </ion-button>
+            </ion-footer>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-content [fullscreen]="true">
+                <ion-card class="cardAddress">
+                    <ion-grid>
+                        <ion-row class="ion-padding-bottom">
+                            <ion-col size="12">
+                                <ion-label class="greenColor headSize">Your Address</ion-label>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="ion-padding-bottom">
+                            <ion-col size="12">
+                                <agm-map [latitude]="api.latitude" [longitude]="api.longitude" [zoom]="zoom" [disableDefaultUI]="disableDefaultUI" [zoomControl]="zoomControl" [fullscreenControl]="fullscreenControl" [styles]="styles">
+                                    <agm-marker [latitude]="api.latitude" [longitude]="api.longitude"></agm-marker>
+                                </agm-map>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="12">
+                                <ion-item lines="none">
+                                    <ion-text color="medium"><span class="locTitle">Address: </span> {{api.address}}
+                                    </ion-text>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="12">
+                                <ion-item lines="none">
+                                    <ion-label><span class="locTitle">City: </span></ion-label>
+                                    <ion-text color="medium">{{api.city}}</ion-text>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row>
+                            <ion-col size="12">
+                                <ion-item lines="none">
+                                    <ion-label><span class="locTitle">Zipcode: </span></ion-label>
+                                    <ion-text color="medium">{{api.zipcode}}</ion-text>
+                                </ion-item>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
+                </ion-card>
+            </ion-content>
+            <ion-footer class="ion-padding-vertical ion-padding-horizontal ion-no-border">
+                <ion-button fill="outline" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase ion-padding-horizontal ">
+                    <ion-icon name="chevron-back"></ion-icon>Prev
+                </ion-button>
+                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="nxtCategory(slides)">
+                    Continue
+                </ion-button>
+            </ion-footer>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-card class="cardAddress">
+                <ion-grid>
+                    <ion-row class="ion-padding-bottom">
+                        <ion-col size="12">
+                            <ion-label class="greenColor headSize">Choose Categories</ion-label>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+            <ion-content>
+                <ion-card class="cardAddress ion-padding">
+                    <ion-list lines="none">
+                        <ion-item *ngFor="let item of category">
+                            <ion-label>{{item.category}}</ion-label>
+                            <ion-checkbox slot="end" [value]="item.category" (ionChange)="checkBoxEvnt($event)">
+                            </ion-checkbox>
+                        </ion-item>
+                    </ion-list>
+                </ion-card>
+            </ion-content>
+            <ion-footer class="ion-padding ion-no-border">
+                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="nxtService(slides)">
+                    Next
+                </ion-button>
+            </ion-footer>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-card class="cardAddress">
+                <ion-grid>
+                    <ion-row class="ion-padding-bottom">
+                        <ion-col size="12">
+                            <ion-label class="greenColor headSize">Services</ion-label>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-card>
+            <ion-content>
+                <ion-card class="cardAddress">
+                    <div *ngFor="let item of api.services">
+                        <ion-card-title class="ion-padding">
+                            <p class="ion-text-uppercase">{{ item.category }}</p>
+                        </ion-card-title>
+                        <ion-grid class="" *ngFor="let a of item.services">
+                            <ion-row class="">
+                                <ion-col size="12">
+                                    <ion-label><b>{{a.service}}:</b></ion-label>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col size="12">
+                                    <ion-item>
+                                        <ion-label color="medium">Price( &#8377; ):</ion-label>
+                                        <ion-input type="text" [value]="a.price" [(ngModel)]="a.price"></ion-input>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                            <ion-row>
+                                <ion-col size="12">
+                                    <ion-item>
+                                        <ion-label color="medium">Duration( mins ):</ion-label>
+                                        <ion-input type="text" [value]="a.time" [(ngModel)]="a.time"></ion-input>
+                                    </ion-item>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-card>
+            </ion-content>
+            <ion-footer class="ion-padding-vertical ion-padding-horizontal ion-no-border">
+                <ion-button fill="outline" [color]="'#228B22'" (click)="savePrevService(slides)" class="textBold ion-text-uppercase ion-padding-horizontal ">
+                    <ion-icon name="chevron-back"></ion-icon>Prev
+                </ion-button>
+                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="saveService(slides)">
+                    Save
+                </ion-button>
+            </ion-footer>
+
+        </ion-slide>
+
+        <ion-slide>
+            <ion-content>
+                <ion-card class="cardAddress">
+                    <ion-grid>
+                        <ion-row class="ion-padding-bottom">
+                            <ion-col size="12">
+                                <ion-label position="floating" class="green">
+                                    Openning Hours
+                                </ion-label>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid> 
+                </ion-card>
+        
+            <ion-card class="cardAddress">
+                <ion-grid>
+                    <ion-row class="ion-padding-bottom">
+                        <ion-col size="12">     
+                            <div class="img4">
+                                <img src="assets/time1.png" alt="time-logo">
+                            </div>
+                        </ion-col>
+                    </ion-row>    
+                </ion-grid>
+            </ion-card>    
+
+                <ion-row>
+                    <ion-item lines="none" class="d-flex align-items-center justify-content-center">
+                        <ion-label>Monday</ion-label>
+                        <ion-checkbox value="Monday" checked="false" (ionChange)="onSelecteCheckBox($event)" slot="start">
+                        </ion-checkbox>
+                    </ion-item>
+
+                    <form [formGroup]="myTimeFormMon" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormMon.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 35px;">
+                            <!-- <ion-label class="form-control" (click)="Mondaytime()">{{value2}}</ion-label> -->
+                            <ion-input *ngIf="checked" size="4" class="form-control" (click)="Mondaytime()" [formControlName]="control.key" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                                {{value2}}
+                            </ion-input>
+                            <ion-icon *ngIf="checked" style="margin-left: 0.25rem;" (click)="removeControlTime1(control)" name="close-circle">
+                            </ion-icon>
+                        </div>
+                    </form>
+                    
+                    <div *ngIf="!checked" class="d-flex align-items-center">
+                        <ion-label>Closed</ion-label>
+                    </div>
+
+                    <div *ngIf="checked" class="addbutton d-flex align-items-center flex-column justify-content-center">
+                        <ion-icon name="add-outline" (click)="addControltime1()"></ion-icon>
+                    </div>
+                </ion-row>
+
+
+                <ion-row>
+                    <ion-item lines="none" class="d-flex align-items-center justify-content-center">
+                        <ion-label>Tusday</ion-label>
+                        <ion-checkbox checked="false" value="Tuesday" (ionChange)="onSelectTusday($event)" color="primary" slot="start">
+                        </ion-checkbox>
+                    </ion-item>
+
+                    <form [formGroup]="myTimeForm" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeForm.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 40px;">
+                            <!-- <ion-label class="form-control" (click)="Tusdaytime()">{{value3}}</ion-label> -->
+                            <ion-input *ngIf="checked1" size="4" class="form-control" (click)="Tusdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                                {{value3}}
+                            </ion-input>
+                            <ion-icon *ngIf="checked1" style="margin-left: 0.25rem;" (click)="removeControlTime(control)" name="close-circle">
+                            </ion-icon>
+                        </div>
+                    </form>
+
+                    <div *ngIf="!checked1" class="d-flex align-items-center">
+                        <ion-label>Closed</ion-label>
+                    </div>
+
+                    <div *ngIf="checked1" class="addbutton d-flex align-items-center flex-column justify-content-center">
+                        <ion-icon name="add-outline" (click)="addControltime()"></ion-icon>
+                    </div>
+                </ion-row>
+                <ion-row>
+                    <ion-item lines="none" class="d-flex align-items-center">
+                        <ion-label>Wednesday</ion-label>
+                        <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxwed($event)" value="Wednesday" color="primary" slot="start">
+                        </ion-checkbox>
+                    </ion-item>
+
+                    <form [formGroup]="myTimeFormwed" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormwed.controls | keyvalue; let i=index" style="padding-right: 8px; padding-left: 10px;">
+
+                            <ion-input *ngIf="checked2" size="4" class="form-control" (click)="wednesdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                                {{value1}}
+                            </ion-input>
+                            <ion-icon *ngIf="checked2" style="margin-left: 0.25rem;" (click)="removeControlTime2(control)" name="close-circle">
+                            </ion-icon>
+                        </div>
+                    </form>
+
+                    <div *ngIf="!checked2" class="d-flex align-items-center">
+                        <ion-label>Closed</ion-label>
+                    </div>
+
+                    <div *ngIf="checked2" class="addbutton d-flex align-items-center flex-column justify-content-center">
+                        <ion-icon name="add-outline" (click)="addControltime2()"></ion-icon>
+                        <!-- <ion-icon name="add-circle-outline" (click)="addControltime()"></ion-icon> -->
+                        <!-- <ion-button fill="clear" (click)="addControltime2()">+Add</ion-button> -->
+                    </div>
+                </ion-row>
+
+                <ion-row>
+                    <ion-item lines="none" class="d-flex align-items-center">
+                        <ion-label>Thursday</ion-label>
+                        <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxthurs($event)" slot="start"></ion-checkbox>
+                    </ion-item>
+
+                    <form [formGroup]="myTimeFormthurs" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormthurs.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 25px;">
+                            <!-- <ion-datetime placeholder="End" (click)="thursdaytime()" [formControlName]="control.key">
+                            </ion-datetime> -->
+                            <!-- <ion-label class="form-control" (click)="thursdaytime()">{{value}}</ion-label> -->
+                            <ion-input *ngIf="checked3" size="4" class="form-control" (click)="thursdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                                {{value0}}
+                            </ion-input>
+                            <ion-icon *ngIf="checked3" style="margin-left: 0.25rem;" (click)="removeControlTime3(control)" name="close-circle">
+                            </ion-icon>
+                        </div>
+                    </form>
+
+                    <div *ngIf="!checked3" class="d-flex align-items-center">
+                        <ion-label>Closed</ion-label>
+                    </div>
+
+                    <div *ngIf="checked3" class="addbutton d-flex align-items-center">
+                        <ion-icon name="add-outline" (click)="addControltime3()"></ion-icon>
+                    </div>
+                </ion-row>
+                <ion-row>
+                    <ion-item lines="none" class="d-flex align-items-center">
+                        <ion-label>Friday</ion-label>
+                        <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxfri($event)" color="primary" slot="start">
+                        </ion-checkbox>
+                    </ion-item>
+
+                    <form [formGroup]="myTimeFormfri" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormfri.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 46px;">
+                            <!-- <ion-label class="form-control" (click)="Fridaytime()">{{value4}}</ion-label> -->
+                            <ion-input *ngIf="checked4" size="4" class="form-control" (click)="Fridaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                                {{value4}}
+                            </ion-input>
+                            <ion-icon *ngIf="checked4" style="margin-left: 0.25rem;" (click)="removeControlTime4(control)" name="close-circle">
+                            </ion-icon>
+                        </div>
+                    </form>
+
+                    <div *ngIf="!checked4" class="d-flex align-items-center">
+                        <ion-label>Closed</ion-label>
+                    </div>
+
+                    <div *ngIf="checked4" class="addbutton d-flex align-items-center flex-column justify-content-center">
+                        <ion-icon name="add-outline" (click)="addControltime4()"></ion-icon>
+                    </div>
+                </ion-row>
+
+                <ion-row>
+                    <ion-item lines="none" class="d-flex align-items-center">
+                        <ion-label>Saturday</ion-label>
+                        <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxsat($event)" color="primary" slot="start">
+                        </ion-checkbox>
+                    </ion-item>
+
+                    <form [formGroup]="myTimeFormsat" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormsat.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 27px;">
+                            <!-- <ion-label class="form-control" (click)="saturdaytime()">{{value5}}</ion-label> -->
+                            <ion-input *ngIf="checked5" size="4" class="form-control" (click)="saturdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                                {{value5}}
+                            </ion-input>
+                            <ion-icon *ngIf="checked5" style="margin-left: 0.25rem;" (click)="removeControlTime5(control)" name="close-circle">
+                            </ion-icon>
+                        </div>
+                    </form>
+
+                    <!-- <form [formGroup]="myTimeForm" class="d-flex">
+                        <div class="d-flex align-items-center" *ngFor="let control of myTimeForm.controls | keyvalue">
+                            <ion-icon (click)="removeControlTime(control)" name="close-circle"></ion-icon>
+                        </div>
+                    </form> -->
+
+                    <div *ngIf="!checked5" class="d-flex align-items-center">
+                        <ion-label>Closed</ion-label>
+                    </div>
+                    <div *ngIf="checked5" class="addbutton d-flex align-items-center flex-column justify-content-center">
+                        <ion-icon name="add-outline" (click)="addControltime5()"></ion-icon>
+                    </div>
+                </ion-row>
+
+                <ion-row>
+                    <ion-item lines="none" class="d-flex align-items-center">
+                        <ion-label>Sunday</ion-label>
+                        <ion-checkbox checked="false" (ionChange)="onSelecteCheckBoxsun($event)" color="primary" slot="start">
+                        </ion-checkbox>
+                    </ion-item>
+
+                    <form [formGroup]="myTimeFormsun" class="d-flex flex-column justify-content-center align-items-center">
+                        <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormsun.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 39px;">
+                            <!-- <ion-label class="form-control" (click)="sundaytime()">{{value6}}</ion-label> -->
+                            <ion-input *ngIf="checked6" size="4" class="form-control" (click)="sundaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                                {{value6}}
+                            </ion-input>
+                            <ion-icon *ngIf="checked6" style="margin-left: 0.25rem;" (click)="removeControlTime6(control)" name="close-circle">
+                            </ion-icon>
+                        </div>
+                    </form>
+
+                    <!-- <form [formGroup]="myTimeForm" class="d-flex">
+                        <div class="d-flex align-items-center" *ngFor="let control of myTimeForm.controls | keyvalue">
+                            <ion-icon (click)="removeControlTime(control)" name="close-circle"></ion-icon>
+                        </div>
+                    </form> -->
+                    <div *ngIf="!checked6" class="d-flex align-items-center">
+                        <ion-label>Closed</ion-label>
+                    </div>
+
+                    <div *ngIf="checked6" class="addbutton d-flex align-items-center flex-column justify-content-center">
+                        <ion-icon name="add-outline" (click)="addControltime6()"></ion-icon>
+                    </div>
+                </ion-row>
+            </ion-content>
+            <ion-footer class="ion-no-border"> 
+                <!-- <div class="next">
+                    <ion-button fill="clear" slot="end" (click)="slides.slideNext()">Next
+                        <ion-icon name="chevron-forward"></ion-icon>
+                    </ion-button>
+                </div> -->
+                <div class="next">
+                    <ion-button fill="outline" [color]="'#228B22'" (click)="slides.slidePrev()" class="textBold ion-text-uppercase ion-padding-horizontal ">
+                        <ion-icon name="arrow-back-outline"></ion-icon>prev
+                    </ion-button>
+                    <ion-button fill="clear"  class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="savehours(slides)">Save
+                        <!-- <ion-icon name="chevron-forward"></ion-icon> -->
+                    </ion-button>
+                </div> 
+            </ion-footer>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-content>
+                <ion-card class="register">
+                    <ion-label position="floating" class="greenColor">
+                        Please add your Shop Photos
+                    </ion-label>
+        
+
+                    <div class="">
+                        <img src="assets/Add_Photo.png" alt="socialmedia-logo" (click)="addPhoto()">
+                        
+                <ion-button class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="addPhoto()">
+                    Add Photo
+                </ion-button>
+                    </div>
+                </ion-card>
+            </ion-content>
+    `       
+            <ion-footer class="ion-no-border">
+                <div class="next">
+                    <ion-button fill="clear" (click)="slides.slidePrev()">
+                        <ion-icon name="chevron-back"></ion-icon>Prev
+                    </ion-button>
+                    <ion-button fill="clear" (click)="slides.slideNext()">Next
+                        <ion-icon name="chevron-forward"></ion-icon>
+                    </ion-button>
+                </div>
+            </ion-footer>
+        </ion-slide>
+
+        <ion-slide>
+            <!-- <div class="skipbutton">
+                <ion-button fill="clear" (click)="skip()">Skip</ion-button>
+            </div> -->
+            <ion-content>
+                <ion-card class="register">
+                    <!--<div class="skipbutton">
+                        <ion-button fill="clear" (click)="skip()">Skip</ion-button>
+                    </div>-->
+                    <div class="signin2">
+                        <img src="assets/signin 2.png" alt="saloo2-logo">
+                    </div>
+                   
+                        <ion-button shape="round" fill="clear" class="btnSubmit textBold ion-text-uppercase ion-padding-horizontal" (click)="register()">Save 
+                            <ion-icon slot="end" name="arrow-forward"></ion-icon>
+                        </ion-button>
+                    </ion-card>
+            </ion-content>
+                <ion-footer class="ion-no-border">
+                    <div class="prevbutton">
+                        <ion-button fill="clear" slot="start" type="button" (click)="slides.slidePrev()">
+                            <ion-icon name="chevron-back"></ion-icon>Prev
+                       </ion-button>
+                    </div>
+                </ion-footer>
+        </ion-slide>
+
+        <!-- <ion-button (click)="slides.slidePrev()">prev</ion-button>
+        <ion-button (click)="slides.slideNext()">Next</ion-button> -->
+    </ion-slides>
+</ion-content>

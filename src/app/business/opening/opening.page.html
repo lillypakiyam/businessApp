@@ -1,0 +1,209 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>opening Hours</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+   <ion-list>
+    <ion-row>
+        <ion-item lines="none" class="d-flex align-items-center justify-content-center">
+            <ion-label>Monday</ion-label>
+            <ion-checkbox [checked]="openingTime.OpeningHours.Monday !== 'closed' " (ionChange)="onSelecteCheckBox($event)" color="primary" slot="start">
+            </ion-checkbox>
+        </ion-item>
+
+        <form [formGroup]="myTimeFormMon" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormMon.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 40px;">
+                <!-- <ion-label class="form-control" (click)="Tusdaytime()">{{value3}}</ion-label> -->
+                <ion-input *ngIf="checked" size="4" class="form-control" [(ngModel)]="openingTime.OpeningHours.Monday || value2" (click)="Tusdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                  <!-- {{openingTime.OpeningHours.Monday}} -->
+                </ion-input>
+                <ion-icon *ngIf="checked" style="margin-left: 0.25rem;" (click)="removeControlTime(control)" name="close-circle">
+                </ion-icon>
+            </div>
+        </form>
+
+        <div *ngIf="!checked" class="d-flex align-items-center">
+            <ion-label>Closed</ion-label>
+        </div>
+
+        <div *ngIf="checked" class="addbutton d-flex align-items-center flex-column justify-content-center">
+            <ion-icon name="add-outline" (click)="addControltime()"></ion-icon>
+        </div>
+    </ion-row>
+
+    <ion-row>
+        <ion-item lines="none" class="d-flex align-items-center justify-content-center">
+            <ion-label>Tusday</ion-label>
+            <ion-checkbox [checked]="openingTime.OpeningHours.Tusday !== 'closed' " value="Tuesday" (ionChange)="onSelectTusday($event)" color="primary" slot="start">
+            </ion-checkbox>
+        </ion-item>
+
+        <form [formGroup]="myTimeForm" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeForm.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 40px;">
+                <ion-input *ngIf="checked1" size="4" class="form-control" [(ngModel)]="openingTime.OpeningHours.Tusday || value3" (click)="Tusdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                    <!-- {{value3}} -->
+                </ion-input>
+                <ion-icon *ngIf="checked1" style="margin-left: 0.25rem;" (click)="removeControlTime(control)" name="close-circle">
+                </ion-icon>
+            </div>
+        </form>
+
+        <div *ngIf="!checked1" class="d-flex align-items-center">
+            <ion-label>Closed</ion-label>
+        </div>
+
+        <div *ngIf="checked1" class="addbutton d-flex align-items-center flex-column justify-content-center">
+            <ion-icon name="add-outline" (click)="addControltime()"></ion-icon>
+        </div>
+    </ion-row>
+    <ion-row>
+        <ion-item lines="none" class="d-flex align-items-center">
+            <ion-label>Wednesday</ion-label>
+            <ion-checkbox [checked]="openingTime.OpeningHours.Wednesday !== 'closed' " (ionChange)="onSelecteCheckBoxwed($event)" value="Wednesday" color="primary" slot="start">
+            </ion-checkbox>
+        </ion-item>
+
+        <form [formGroup]="myTimeFormwed" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormwed.controls | keyvalue; let i=index" style="padding-right: 8px; padding-left: 10px;">
+
+                <ion-input *ngIf="checked2" size="4" class="form-control" [(ngModel)]="openingTime.OpeningHours.Wednesday || value1" (click)="wednesdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                    <!-- {{value1}} -->
+                </ion-input>
+                <ion-icon *ngIf="checked2" style="margin-left: 0.25rem;" (click)="removeControlTime2(control)" name="close-circle">
+                </ion-icon>
+            </div>
+        </form>
+
+        <div *ngIf="!checked2" class="d-flex align-items-center">
+            <ion-label>Closed</ion-label>
+        </div>
+
+        <div *ngIf="checked2" class="addbutton d-flex align-items-center flex-column justify-content-center">
+            <ion-icon name="add-outline" (click)="addControltime2()"></ion-icon>
+        </div>
+    </ion-row>
+
+    <ion-row>
+        <ion-item lines="none" class="d-flex align-items-center">
+            <ion-label>Thursday</ion-label>
+            <ion-checkbox [checked]="openingTime.OpeningHours.Thursday !== 'closed' " (ionChange)="onSelecteCheckBoxthurs($event)" slot="start"></ion-checkbox>
+        </ion-item>
+
+        <form [formGroup]="myTimeFormthurs" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormthurs.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 25px;">
+                <ion-input *ngIf="checked3" size="4" class="form-control" [(ngModel)]="openingTime.OpeningHours.Thursday || value0" (click)="thursdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                    <!-- {{value0}} -->
+                </ion-input>
+                <ion-icon *ngIf="checked3" style="margin-left: 0.25rem;" (click)="removeControlTime3(control)" name="close-circle">
+                </ion-icon>
+            </div>
+        </form>
+
+        <div *ngIf="!checked3" class="d-flex align-items-center">
+            <ion-label>Closed</ion-label>
+        </div>
+
+        <div *ngIf="checked3" class="addbutton d-flex align-items-center">
+            <ion-icon name="add-outline" (click)="addControltime3()"></ion-icon>
+        </div>
+    </ion-row>
+    <ion-row>
+        <ion-item lines="none" class="d-flex align-items-center">
+            <ion-label>Friday</ion-label>
+            <ion-checkbox [checked]="openingTime.OpeningHours.Friday !== 'closed' " (ionChange)="onSelecteCheckBoxfri($event)" color="primary" slot="start">
+            </ion-checkbox>
+        </ion-item>
+
+        <form [formGroup]="myTimeFormfri" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormfri.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 46px;">
+                <!-- <ion-label class="form-control" (click)="Fridaytime()">{{value4}}</ion-label> -->
+                <ion-input *ngIf="checked4" size="4" class="form-control" [(ngModel)]="openingTime.OpeningHours.Friday || value4" (click)="Fridaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                    <!-- {{value4}} -->
+                </ion-input>
+                <ion-icon *ngIf="checked4" style="margin-left: 0.25rem;" (click)="removeControlTime4(control)" name="close-circle">
+                </ion-icon>
+            </div>
+        </form>
+
+        <div *ngIf="!checked4" class="d-flex align-items-center">
+            <ion-label>Closed</ion-label>
+        </div>
+
+        <div *ngIf="checked4" class="addbutton d-flex align-items-center flex-column justify-content-center">
+            <ion-icon name="add-outline" (click)="addControltime4()"></ion-icon>
+        </div>
+    </ion-row>
+
+    <ion-row>
+        <ion-item lines="none" class="d-flex align-items-center">
+            <ion-label>Saturday</ion-label>
+            <ion-checkbox [checked]="openingTime.OpeningHours.saturday !== 'closed' " (ionChange)="onSelecteCheckBoxsat($event)" color="primary" slot="start">
+            </ion-checkbox>
+        </ion-item>
+
+        <form [formGroup]="myTimeFormsat" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormsat.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 27px;">
+                <!-- <ion-label class="form-control" (click)="saturdaytime()">{{value5}}</ion-label> -->
+                <ion-input *ngIf="checked5" size="4" class="form-control" [(ngModel)]="openingTime.OpeningHours.saturday || value5" (click)="saturdaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                    <!-- {{value5}} -->
+                </ion-input>
+                <ion-icon *ngIf="checked5" style="margin-left: 0.25rem;"  (click)="removeControlTime5(control)" name="close-circle">
+                </ion-icon>
+            </div>
+        </form>
+
+        <div *ngIf="!checked5" class="d-flex align-items-center">
+            <ion-label>Closed</ion-label>
+        </div>
+        <div *ngIf="checked5" class="addbutton d-flex align-items-center flex-column justify-content-center">
+            <ion-icon name="add-outline" (click)="addControltime5()"></ion-icon>
+        </div>
+    </ion-row>
+
+    <ion-row>
+        <ion-item lines="none" class="d-flex align-items-center">
+            <ion-label>Sunday</ion-label>
+            <ion-checkbox [checked]="openingTime.OpeningHours.Sunday !== 'closed' " (ionChange)="onSelecteCheckBoxsun($event)" color="primary" slot="start">
+            </ion-checkbox>
+        </ion-item>
+
+        <form [formGroup]="myTimeFormsun" class="d-flex flex-column justify-content-center align-items-center">
+            <div class="d-flex justify-content-between align-items-center" *ngFor="let control of myTimeFormsun.controls | keyvalue; let i=index" style="padding-right: 9px; padding-left: 39px;">
+                <!-- <ion-label class="form-control" (click)="sundaytime()">{{value6}}</ion-label> -->
+                <ion-input *ngIf="checked6" size="4" class="form-control" [(ngModel)]="openingTime.OpeningHours.Sunday || value6" (click)="sundaytime()" style="padding-bottom: 5px; padding-top: 5px; width: 110px; height: 35px;">
+                    <!-- {{value6}} -->
+                </ion-input>
+                <ion-icon *ngIf="checked6" style="margin-left: 0.25rem;" (click)="removeControlTime6(control)" name="close-circle">
+                </ion-icon>
+            </div>
+        </form>
+        
+        <div *ngIf="!checked6" class="d-flex align-items-center">
+            <ion-label>Closed</ion-label>
+        </div>
+
+        <div *ngIf="checked6" class="addbutton d-flex align-items-center flex-column justify-content-center">
+            <ion-icon name="add-outline" (click)="addControltime6()"></ion-icon>
+        </div>
+    </ion-row>
+   </ion-list>
+
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-button (click)="back()">Back</ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button (click)="getOpenningDetails()">Save</ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>

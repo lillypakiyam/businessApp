@@ -1,0 +1,22 @@
+
+/* Category */
+
+.toolbar{
+    --background: #228B22 !important;
+}
+
+.cardCategory{
+    box-shadow: none !important;
+}
+
+ion-checkbox{
+    --background-checked: #228B22; 
+    //--border-color: #228B22;
+    --border-color-checked: transparent !important;
+}
+
+.btnNext{
+    --background: #228B22;
+    color: white;
+    border-radius: 15px;
+}

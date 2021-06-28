@@ -1,0 +1,63 @@
+ion-toolbar {
+    --background: forestgreen;
+}
+
+ion-fab-button {
+    --background: forestgreen;
+}
+
+ion-button {
+    --background: forestgreen;
+}
+
+.serviceInput {
+    padding-right: 20px !important;
+    padding-left: 80px !important;
+    margin-top: 60px !important;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+    border: 1px solid gray;
+    //padding-bottom: 20px;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    //width: 100%
+}
+
+.serviceInputcat {
+    padding-right: 20px !important;
+    padding-left: 60px !important;
+    margin-top: 10px !important;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+    border: 1px solid gray;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.serviceInputprice {
+    padding-right: 20px !important;
+    padding-left: 100px !important;
+    margin-top: 10px !important;
+    margin-left: 30px !important;
+    margin-right: 30px !important;
+    border: 1px solid gray;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+ion-card{
+    background-image: linear-gradient(to right, #349220, #34a626, #31ba2d, #2ace34, #1ae33d);
+    //background-image: linear-gradient(to right, #2f9619, #479c17, #5ca216, #6ea816, #80ae17);
+   // background-image: radial-gradient(circle at 50% -20.71%, #fff358 0, #fff64c 7.14%, #fff841 14.29%, #fbf939 21.43%, #e0f934 28.57%, #c2f832 35.71%, #a1f535 42.86%, #79f23c 50%, #3fee46 57.14%, #00ea54 64.29%, #00e663 71.43%, #00e375 78.57%, #00df88 85.71%, #00dc9c 92.86%, #00d9b1 100%);
+    // margin-bottom:30px;
+    height: 60px;
+    // width:100%;
+    // margin-top:70px;
+    border-radius:15px;
+}

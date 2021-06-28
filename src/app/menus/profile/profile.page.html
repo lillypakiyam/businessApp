@@ -1,0 +1,56 @@
+<ion-content>
+    <div class="profile">
+        <div class="d-flex justify-content-between">
+            <ion-buttons slot="start">
+                <ion-menu-button menu="main-menu" style="color:white"></ion-menu-button>
+            </ion-buttons>
+            <div class="d-flex justify-content-center align-items-center px-2" style="color: white;">
+                <label>Profile</label>
+            </div>
+            <div class="d-flex justify-content-center align-items-center px-2" >
+                <ion-icon name="settings" style="font-size: 20px; color: white;" routerLink="/settings"></ion-icon>
+            </div>
+        </div>
+        <img [src]="base64Image" *ngIf="base64Image" />
+        <div class="d-flex justify-content-center align-items-center">
+            <ion-avatar (click)="presentActionSheet()" style="height: 100px; width: 100px;" routerLink="/profile">
+                <img src="assets/avatar.png">
+            </ion-avatar>
+        </div>
+        <!-- <div>
+            <ion-icon name="camera-outline" style="height: 30px; width: 30px; color:white; padding-left: 40px;"></ion-icon>
+        </div> -->
+    </div>
+
+    <!-- <div *ngFor="let item of ownerpro" class="details"> -->
+        <ion-item>
+                <ion-label position="stacked" style="font-size: large;">Shop Name</ion-label>
+                <ion-input type="text" [(ngModel)]="profile.bussinessname">
+                </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked"  style="font-size: large;">Name</ion-label>
+            <ion-input type="text" [(ngModel)]="profile.name"> 
+            </ion-input>
+            <!-- <ion-label position="stacked"  style="font-size: large;">Name: {{profile.name}}</ion-label> -->
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked"  style="font-size: large;">Email</ion-label>
+            <ion-input type="text" [(ngModel)]="profile.Email">
+            </ion-input>
+            <!-- <ion-label position="stacked"  style="font-size: large;">Email: {{profile.Email}}</ion-label> -->
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked"  style="font-size: large;">Contact No</ion-label>
+            <ion-input readonly>{{profile.mobile}}</ion-input>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-label position="stacked"  style="font-size: large;">Address : </ion-label>
+            <ion-textarea rows="4" readonly [value]="profile.address"></ion-textarea>
+        </ion-item>
+      <!-- <ion-button (click)="save()">Save</ion-button> -->
+          <ion-button expand="block" class="savedetail" (click)="save()">Save Details</ion-button>
+</ion-content>
+<!-- <ion-footer class="ion-padding">
+    <ion-button expand="block" class="savedetail" (click)="save()">Save Details</ion-button>
+  </ion-footer> -->

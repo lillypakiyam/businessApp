@@ -1,0 +1,111 @@
+  Hair_salon:{
+    id:'Hair salon',
+    service1:"hair cut",
+    service2:"hair color",
+    service3:"hair style",
+    service4:"hairt exture",
+    service5:"hair Extension"
+  },
+Barbershop:{
+  id:'Barberf Shop',
+  service1:"head shave",
+  service2:"razor fade",
+  service3:"beard trim",
+  service4:"mustache trim",
+  service5:"face shave"
+},
+Nail_salon:{
+  id:'Nail salon',
+  service1:"polish",
+  service2:"nailart",
+  service3:"manicure",
+  service4:"pedicure",
+  service5:"acrylic"
+},
+ 
+ Eyebrows_Lashes:{
+  id:'Eyebrows and Lashes',
+  service1:"Lash Extensions",
+  service2:"Lash Lift and Tint",
+  service3:" Tinting",
+  service4:"Trimming and Tweezing ",
+  service5:"flattering eyebrow"
+},
+Massage:{
+  id:'Massage',
+  service1:"Swedish massage",
+  service2:"Hot stone massage",
+  service3:"Aromatherapy massage",
+  service4:"Deep tissue massage",
+  service5:"Sports massage",
+  service6:"Trigger point massage",
+  service7:"Reflexology"
+},
+ Makeup_Artist:{
+  id:'Makeup Artist',
+  service1:"Fashion",
+  service2:"High Fashion",
+  service3:"Innovation in Makeup",
+  service4:"Individual Styles",
+  service5:"Theater"
+},
+Day_Spa:{
+  id:'Day Spa',
+  service1:"Full-body mud mask",
+  service2:" Herbal body wrap",
+  service3:"Paraffin body wrap",
+  service4:"Water Therapy",
+  service5:"Exfoliation"
+}, 
+Tatoo_Shop:{
+  id:'Tattoo Shop',
+  service1:"Colored Tattoo",
+  service2:"Permanent Tattoo",
+  service3:"Black And White Tattoo",
+  service4:"Realistic Tattoo",
+  service5:"Crystal Body Tattoo"
+},
+Personal_trainer:{
+  id:'Personal trainer',
+  service1:"Special Effects",
+  service2:"skin-care advice",
+  service3:"the best beauty products",
+  service4:"tips",
+  service5:" trends"
+},
+
+ Wedding_Makeup_Artist:{
+  id:'Wedding Makeup Artist',
+  service1:"HD Makeup",
+  service2:"Airbrush Makeup",
+  service3:"Matte Makeup",
+  service4:"Mineral Makeup",
+  service5:"Smokey Makeup"
+},
+ Medical_Esthetician:{
+  id:'Medical Esthetician',
+  service1:"Brow Microblading",
+  service2:"Hand peel",
+  service3:"Glycolic peel",
+  service4:"Anti-aging peel",
+  service5:"Gentlewaves LED"
+},
+ Hair_Removal:{
+  id:'Hair Removal',
+  service1:"Waxing",
+  service2:"Threading",
+  service3:" Soft wax",
+  service4:"Chocolate wax",
+  service5:"Sugar wax"
+},
+ Piercing:{
+  id:'Piercing',
+  service1:"Ear Piercing",
+  service2:"Nose Piercing",
+  service3:"Rook",
+  service4:"Helix",
+  service5:"Lobe"
+}
+ 
+
+};

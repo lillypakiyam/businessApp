@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title class="ion-text-center">Location</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <!--<ion-item>
+    <ion-label>latitude : {{latitude}}</ion-label>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>longitude : {{longitude}}</ion-label>
+  </ion-item>-->
+
+    <!-- <ion-item>
+        <ion-label>address : </ion-label>
+        <ion-textarea placeholder="Enter your details" [(ngModel)]="address"></ion-textarea>
+    </ion-item> -->
+
+    <!-- <div class="address"> -->
+    <!-- <ion-label>address : </ion-label> -->
+    <!-- <ion-textarea class="form-control" placeholder="Enter your Address" [(ngModel)]="address"></ion-textarea>
+    </div> -->
+
+    <agm-map [latitude]="lat" [longitude]="lng">
+        <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+
+    <div class="savebutn">
+        <ion-button fill="clear" style="width: 230px;" class="btn btn-outline-info" (click)="logout()">save</ion-button>
+    </div>
+
+
+</ion-content>

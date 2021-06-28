@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>photos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button small icon-only outline (click)="Accesscamera()">
+            camera
+            <ion-icon name="camera"> Camera</ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <ion-button small icon-only outline (click)="AccessGallery()">
+            Gallery
+            <ion-icon name="image"> Gallery</ion-icon>
+          </ion-button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div></div>
+     </ion-col>
+    </ion-row>
+    <img [src]="base64Image" *ngIf="base64Image" />
+  </ion-grid>
+</ion-content>

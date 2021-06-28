@@ -1,0 +1,93 @@
+.back-circle {
+    z-index: -1;
+    width: 250px;
+    height: 500px;
+    background: rgb(57, 158, 57);
+    position: absolute;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+}
+
+ion-content {
+    --background: rgb(184, 248, 186);
+    .back-blob {
+        z-index: -1;
+        width: 500px;
+        position: absolute;
+        right: -50%;
+        top: 0;
+    }
+    form {
+        margin-top: 100px;
+    }
+    .phonenumber {
+        background-color: rgba(255, 255, 255, .8);
+        border-radius: 20px;
+        margin-bottom: 10px;
+        margin-top: 170px;
+        margin-right: 50px;
+        margin-left: 40px;
+        box-shadow: 0 10px 30px 0px rgba(25, 55, 25, .8);
+        box-sizing: 0 10px 30px 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        align-self: center;
+    }
+    .form-control {
+        display: block;
+        width: 80%;
+        background: transparent;
+        font-family: 'Roboto', monospace;
+        font-size: 16px;
+        line-height: 1.2;
+        border: none;
+        outline: none;
+        height: 46px;
+        padding: 0 20px 0 23px;
+    }
+    .otpbutton {
+        display: flex;
+        justify-content: center;
+    }
+    .btn {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        min-width: 50px;
+        margin-left: 40px;
+        margin-right: 40px;
+        height: 42px;
+        background-color: darkgreen;
+        border-radius: 20px;
+        font-size: 14px;
+        color: white;
+        text-transform: uppercase;
+        padding-top: 5px;
+        transition: all 0.4s;
+        box-shadow: 0 10px 30px 0px rgb(103, 104, 100);
+    }
+    .ion-padding {
+        margin-top: -20px;
+    }
+}
+
+ion-toolbar {
+    --background: rgb(184, 248, 186);
+    ion-label {
+        border: darkblue;
+    }
+    p {
+        color: rgb(5, 27, 12);
+        ion-checkbox {
+            border-color: blue;
+        }
+        a {
+            color: darkblue;
+        }
+    }
+}

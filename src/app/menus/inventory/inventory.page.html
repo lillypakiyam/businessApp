@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar class="toolbar">
+        <ion-buttons slot="start">
+            <ion-menu-button color="light"></ion-menu-button>
+        </ion-buttons>
+        <ion-title color="light">Categories</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="cardCategory ion-padding">
+    <ion-list lines="none">
+      <div *ngFor="let choose of api.choosen">
+        <ion-item *ngFor="let item of category">          
+           <ion-label>{{item.category}}</ion-label>
+           <ion-checkbox slot="end" [disabled]="choose.category === item.category" [checked]="choose.category === item.category" [value]="item.category" (ionChange)="selectChange($event)">
+           </ion-checkbox>
+        </ion-item>
+      </div>
+      </ion-list>   
+  </ion-card>    
+</ion-content>
+<ion-footer class="ion-padding">
+  <ion-button expand="block" class="btnNext" [disabled]="api.category.length === 0" (click)="next()">Next</ion-button>
+</ion-footer>

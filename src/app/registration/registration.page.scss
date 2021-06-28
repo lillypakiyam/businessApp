@@ -1,0 +1,497 @@
+// ion-content{
+//  --background: #3880ff;
+// }
+.border {
+    border: 1px solid lightgray;
+    border-radius: 8px;
+}
+
+.welcomeTitle {
+    color: white;
+    align-self:center ;
+    font-family: sans-serif;
+    font-weight: 400;
+    padding: 5vh;
+    margin-top: -10vh;
+    color: forestgreen;
+
+}
+.suc{
+    color: forestgreen;
+    font-size: 3.5vh;
+    font-weight: bold;
+}
+.register{
+    color: forestgreen;
+    font-family:'Noto sans JP', sans-serif;
+    font-weight: bold;
+    align-self: center;
+    margin-top: 10px;
+    font-size: 5vh;
+    box-shadow: none;
+}
+.registerbutton {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: white;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
+    ion-button{
+    color: white;
+    background: forestgreen;
+    }
+}
+.welcomeTitle {
+    color: forestgreen;
+    display: flex;
+    font-size: 25px;
+    font-family: sans-serif;
+    justify-content: center;
+    font-weight: 400;
+    align-self: center;
+}
+.container-form-btn{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 160px;
+    outline: none;
+    text-align: center;
+    background-color: forestgreen;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    padding-top:5px;
+    transition: all 0.4s;
+    background-color: forestgreen;
+
+}
+.form-btn:hover{
+    background-color: forestgreen;
+}
+.form-btn:active{
+    background-color: forestgreen;
+    transform: translate(2vh);
+}
+
+.msg{
+    font-family: 'Noto sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 3.5vh;
+}
+ion-slides {
+    --text-align: center;
+    height: 100%;
+    color: forestgreen;
+    --bullet-background: gray;
+    --bullet-background-active: forestgreen;
+}
+
+ion-slider-pager {
+    --moz-list-bullet-color: forestgreen;
+}
+
+.signin2{
+    height: 50vh;
+   // width: 350px;
+    align-self: center;
+}
+.img {
+   
+        height: 55vh;
+        margin-top: 2vh;
+        margin-bottom: 6vh;
+        margin-left: -2vh;
+    }
+
+.img2 {
+    height: 45vh;
+    padding-top: 1vh; 
+}
+
+.img3 {
+    height: 45vh;
+    //padding-top: 10px;
+}
+
+.img4 {
+    height: 30vh;
+    //padding-top: 10px;
+}
+
+agm-map {
+    height: 20vh;
+    border-radius: 4vh;
+}
+
+ion-slide {
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.btn{
+    block-size: auto;
+    margin-top: 2vh;
+}
+.Emailslide {
+    padding-right: 3vh !important;
+    padding-left: 3vh !important;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%
+}
+
+.nextbutton {
+    color: forestgreen;
+    padding-right: 20px;
+    }
+
+.next {
+    font-family:sans-serif;
+    font-weight: 300;
+    align-self: flex-end;
+  
+}
+
+ion-button {
+    color: forestgreen;
+    font-size: 2.5vh;
+
+}
+
+.chev{
+    width: 4vh;
+}
+.prevbutton {
+    margin-left: 10px;
+    align-self:flex-start;
+}
+
+.nextprev {
+    padding-top: 200px;
+    padding-bottom: 80px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.checkbox {
+    padding-left: 3vh;
+    justify-content: center;
+}
+
+.or {
+    color: white
+}
+
+.categories {
+    color: forestgreen;
+    font-size: 4vh;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    padding-right: 1vh;
+    padding-left: 1vh;
+}
+
+.inputText{
+    text-align: left;
+}
+
+ion-note {
+    color: black;
+    //font-style: Sacramento;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    font-size: 8vh;
+}
+
+.note {
+    font-size: 3vh;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+    box-shadow: none;
+}
+.namemon {
+    color: black;
+    margin-top: 4vh;
+    font-weight: 400;
+}
+
+.time {
+    padding-top: 5vh;
+    padding-left: 0.4vh;
+}
+
+.note2 {
+    
+    padding-top: 2vh;
+    padding-bottom: 5vh;
+    color: forestgreen;
+}
+
+.num{
+    font-size: medium;
+    font-weight: bold;
+}
+.BName {
+    color: black;
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin:20px;
+    align-self: center;
+}
+
+.BNameinsta {
+    padding-right: 3vh !important;
+    padding-left: 3vh !important;
+    margin-top: 2vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 45vh;
+}
+.form-control{
+    display: block;
+    box-shadow: 0 1vh 2.5vh 0 rgba(243,247,243,0.932);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    border-color: rgb(72, 204, 245);
+    border-style: ridge;
+    border-width: 0.2vh;
+    color: rgb(3,15,7);
+    border-radius: 2vh;
+    font-size: 2.5vh;
+    width: 60%;
+    margin-top: 10px;
+}
+.selectam {
+    color: black;
+    padding-left: 4vh;
+    padding-right: 4vh;
+    margin-left: 2.5vh;
+    margin-right: 0.4vh;
+    margin-bottom: 0.4vh;
+}
+
+.selectam1 {
+    color: black;
+    padding-left: 4vh;
+    padding-right:4vh;
+    margin-left:0.4vh;
+    margin-right:0.4vh;
+    display: flex;
+}
+
+.selectpm1 {
+    color: black;
+    padding-left: 4vh;
+    padding-right:4vh;
+    margin-left:0.4vh;
+    margin-right:0.4vh;
+    display: flex;
+}
+
+.selectpm {
+    color: black;
+    padding-left: 4vh;
+    padding-right:4vh;
+    margin-left:0.4vh;
+    margin-right:0.4vh;
+    display: flex;
+}
+
+.hoursaving {
+    padding-top: 2vh;
+}
+
+.choosecat {
+    border: 1vh solid lightseagreen;
+}
+
+.nextprev1 {
+    padding-top: 18vh;
+    padding-right: 3vh;
+    padding-left: 3vh;
+}
+
+.nextprev2 {
+    padding-bottom: 30vh;
+}
+
+.bgcolor {
+    background-color: slateblue;
+    height: 50vh;
+}
+
+.skipbutton {
+    padding-bottom: 20px;
+    padding-left: 200px;
+    //padding-top: -20px;
+    margin-top: 5px;
+}
+.save{
+    color: white;
+    background: forestgreen;
+    border-radius: 20px;
+    display: block;
+}
+/* Address-Block */
+.toast-custom-class{
+    --color:white;
+    --border-color:skyblue;
+    --border-style:solid;
+    --background-color:red;
+}
+
+.cardAddress{
+    box-shadow: none !important;
+}
+
+.greenColor{
+    color: black;
+    font-size:3vh;
+}
+.headsize{
+    font-size: 3vh;
+    color: forestgreen;
+}
+
+.green{
+    font-weight: 700;
+    color: forestgreen;
+    font-size: 4vh;
+    font-family: sans-serif;
+    box-shadow:none;
+}
+.headSize{
+    font-size: 3vh;
+    font-weight: 600;
+    font-family: sans-serif;
+    margin-top: 9vh;
+}
+
+ion-searchbar.input{
+    text-align: left;
+  --background: white;
+    font-weight: 600;
+ --border-radius: 5vh;
+    font-size: 10vh;
+    font-weight: 400;
+}
+
+.locTitle{
+    font-weight: bold;
+}
+.cat{
+    font-size: 3vh;
+    font-family: sans-serif;
+    color: black;
+    font-weight: 600;
+}
+.btnSubmit{
+    --border-radius: 2.5vh;
+    --background: forestgreen;
+    color: white;
+}
+
+.btnAdd{
+    --border-radius: 2vh;
+}
+
+.typeText{
+    border-bottom: 0.5vh solid forestgreen;
+}
+
+ion-checkbox{
+    --background-checked: #228B22; 
+    //--border-color: #228B22;
+    --border-color-checked: transparent !important;
+}
+
+.btnNext{
+    --background: #228B22;
+    color: white;
+    border-radius: 5vh;
+}
+.green1{
+    font-family: 'Noto ' sans-serif;
+    font-size: 4vh;
+    font-weight: 400;
+    color: forestgreen;
+}
+.cat1{
+    font-family:'Noto ' sans-serif ;
+    font-size:3.5vh;
+    color: darkred;
+    font-weight: 600;
+}
+.ser{
+    font-weight: bolder;
+    font-family: sans-serif;
+    font-size: 2.5vh;
+    color: black;
+}
+.price{
+    font-family: sans-serif;
+    font-size: 2vh;
+    font-weight: 450;
+}
+.note1{
+    font-size: 4vh;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: forestgreen;
+    font-weight: 500;
+}
+.time{
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

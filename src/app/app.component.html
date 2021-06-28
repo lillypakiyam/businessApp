@@ -1,0 +1,68 @@
+<ion-app>
+    <ion-split-pane contentId="main">
+        <ion-menu side="start" menuId="main-menu" contentId="main">
+            <!-- <ion-header>
+      <ion-toolbar class="toolbar">
+        <ion-title class="ion-text-center" color="light">Menu</ion-title>
+      </ion-toolbar>
+    </ion-header> -->
+
+            <ion-content>
+                <div class="avatar">
+                    <ion-menu-toggle autoHide="true">
+                        <ion-avatar style="height: 120px; width: 120px;" routerLink="/profile">
+                            <img src="assets/avatar.png">
+                            <!-- <div style="color: white; text-align:center; size:30;">
+                                <ion-label style="size: 30;">{{mobilenu.name}}</ion-label>
+                            </div> -->
+                        </ion-avatar> 
+                    </ion-menu-toggle>
+                </div>
+                <ion-list lines="none">
+                    <ion-menu-toggle auto-hide="false">
+                        <!-- <ion-item routerLink="/profile">
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+          <ion-label>Your profile</ion-label>
+          <ion-badge color="warning">Owner</ion-badge>
+        </ion-item> -->
+
+                        <ion-item routerLink="/home">
+                            <ion-icon name="calendar-number-outline" slot="start"></ion-icon>
+                            <ion-label>Appointment</ion-label>
+                        </ion-item>
+
+                        <ion-item routerLink="/sales">
+                            <ion-icon name="cart-outline" slot="start"></ion-icon>
+                            <ion-label>sales</ion-label>
+                        </ion-item>
+
+                        <ion-item routerLink="/inventory">
+                            <ion-icon name="add-circle-outline" slot="start"></ion-icon>
+                            <ion-label>Categories</ion-label>
+                        </ion-item>
+
+                        <!-- <ion-item routerLink="/business">
+          <ion-icon name="business-outline" slot="start"></ion-icon>
+          <ion-label>Business profile</ion-label>
+        </ion-item> -->
+
+                        <ion-item routerLink="/settings">
+                            <ion-icon name="construct-outline" slot="start"></ion-icon>
+                            <ion-label>Settings</ion-label>
+                        </ion-item>
+
+                        <ion-item routerLink="/reviews">
+                            <ion-icon name="star-half-outline" slot="start"></ion-icon>
+                            <ion-label>Reviews & Ratings</ion-label>
+                        </ion-item>
+
+                        <div class="center">
+                            <ion-button class="btnLogout" shape="round" (click)="close()">Logout</ion-button>
+                        </div>
+                    </ion-menu-toggle>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="main"></ion-router-outlet>
+    </ion-split-pane>
+</ion-app>

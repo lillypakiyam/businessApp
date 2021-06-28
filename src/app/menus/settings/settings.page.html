@@ -1,0 +1,105 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" style="color: white;">
+            <ion-menu-button menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+        <ion-title style="color: white; padding-left: 70px;">Settings</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <!-- <ion-list> -->
+        <ion-grid>
+            <ion-row>
+                <ion-col col-6>
+                    <ion-card style="background-color:rgb(157, 247, 157);" routerLink="/profile">
+                        <div style="padding-top:30px;background-color:rgb(157, 247, 157);" class="d-flex justify-content-center align-items-center px-2">
+                            <ion-icon name="person-circle-outline" ></ion-icon>
+                        </div>
+                        <div style="background-color:rgb(157, 247, 157);" >
+                            <ion-label style="color: black;"> <b> Profile </b> </ion-label>
+                        </div>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-card style="background-color:rgb(157, 247, 157);" routerLink="/opening">
+                        <div style="padding-top:30px; background-color:rgb(157, 247, 157);" class="d-flex justify-content-center align-items-center px-2">   
+                          <ion-icon name="time-outline"></ion-icon>
+                        </div>
+                      <div style="background-color:rgb(157, 247, 157);">
+                          <ion-label style="color: black;"><b>Opening Hours</b></ion-label>
+                      </div>
+                </ion-card>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-6>
+                    <ion-card style="background-color:rgb(157, 247, 157);"  routerLink="/photos">
+                    <div style="padding-top:30px; background-color:rgb(157, 247, 157);" class="d-flex justify-content-center align-items-center px-2">
+                        <ion-icon name="images-outline" slot="start"></ion-icon>
+                    </div>
+                    <div style="background-color:rgb(157, 247, 157);">
+                        <ion-label style="color: black;">
+                            <b> Workplace </b>
+                        </ion-label>
+                    </div>
+                    <ion-label style="color: black;">
+                        <b>Photos</b>
+                    </ion-label>
+                </ion-card>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-card style="padding-top:30px;background-color:rgb(157, 247, 157);" routerLink="/help">
+                    <div style="background-color:rgb(157, 247, 157);" class="d-flex justify-content-center align-items-center px-2">
+                        <ion-icon name="help-circle-outline" slot="start"></ion-icon>
+                    </div>
+                    <div style="background-color:rgb(157, 247, 157);">
+                        <ion-label style="color: black;" > <b>Help</b>
+                        </ion-label>
+                    </div>
+                </ion-card>
+                </ion-col>
+            </ion-row>
+
+            <ion-row>
+                <ion-col col-6>
+                    <ion-card style="background-color:rgb(157, 247, 157);" routerLink="/faq">
+                    <div style="padding-top:30px; background-color:rgb(157, 247, 157);" class="d-flex justify-content-center align-items-center px-2">
+                        <ion-icon name="help-outline" slot="start"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-label style="color: black;"> <b>FAQ?</b></ion-label>
+                    </div>
+                </ion-card>
+                </ion-col>
+                <ion-col col-6>
+                    <ion-card style="padding-top:30px; background-color:rgb(157, 247, 157);" routerLink="/privacy">
+                        <div style=" background-color:rgb(157, 247, 157);" class="d-flex justify-content-center align-items-center px-2">
+                            <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+                        </div>
+                        <div style="background-color:rgb(157, 247, 157);">
+                            <ion-label style="color: black;"> <b>Privacy Policy</b></ion-label>
+                        </div>
+                    </ion-card>
+                </ion-col>
+            </ion-row>
+
+            <!-- <ion-row>
+                <ion-col col-6>
+                    <ion-card style="background-color:rgb(157, 247, 157);" routerLink="/language">
+                        <div style="padding-left: 20px; background-color:rgb(157, 247, 157);">
+                          <ion-icon name="language-outline" slot="start"></ion-icon>
+                        </div>
+                        <div style="background-color:rgb(157, 247, 157);">
+                            <ion-label style="color: black;">Language</ion-label>
+                        </div>
+                            <ion-label style="color: black;">Settings</ion-label>
+                    </ion-card>
+                </ion-col>
+                <ion-col col-6></ion-col>
+            </ion-row> -->
+        </ion-grid>
+
+    <!-- </ion-list> -->
+</ion-content>

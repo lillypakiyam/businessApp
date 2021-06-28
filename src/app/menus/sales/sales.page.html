@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button color="light"></ion-menu-button>
+  </ion-buttons>
+    <ion-title>sales</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="head">
+    <ion-label > Add your product Details</ion-label>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div></div>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+        <div>
+          <ion-label slot="end" small icon-only outline (click)="Accesscamera()" color="primary">Camera
+            <ion-icon name="camera"> Camera</ion-icon>
+          </ion-label>
+        </div>
+      </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+        <div>
+          <ion-label slot="end" small icon-only outline (click)="AccessGallery()" color="primary">Gallery
+            <ion-icon size="5" name="image"> Gallery</ion-icon>
+          </ion-label>
+        </div>
+      </ion-item>
+      </ion-col>
+      <ion-col>
+        <div></div>
+     </ion-col>
+    </ion-row>
+    <img [src]="base64Image" *ngIf="base64Image"/>
+    </ion-grid>
+    <div>
+    
+  <ion-item>
+    <ion-input type="text" placeholder="Enter product name" [(ngModel)]="productDetail.productname"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Enter product color" [(ngModel)]="productDetail.productcolor"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" placeholder="Enter product price" [(ngModel)]="productDetail.productprice"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="text" placeholder="Enter product model" [(ngModel)]="productDetail.productmodel"></ion-input>
+  </ion-item>
+  <div class="submit">  
+    <ion-button color="danger" slot="end" (click)="addProductDetail()">Submit</ion-button></div>
+</div>
+  <div class="card"  >
+    <ion-card *ngFor="let item of proInfo">
+      <ion-card-content ><ion-item>
+        <ion-label>
+    {{item.productname}}</ion-label></ion-item>
+    <ion-item>
+      <ion-label>{{item.productcolor}}</ion-label></ion-item>
+      <ion-item>
+        <ion-label>{{item.productmodel}}</ion-label></ion-item>
+        <ion-item>
+          <ion-label>{{item.productprice}}</ion-label></ion-item>
+      </ion-card-content>
+    </ion-card>
+</div>
+
+</ion-content>

@@ -1,0 +1,131 @@
+ [{
+   "category":"Hair Salon",
+   "services":[
+    { "service":"Hair Cut", "price":"70","time":"20"},
+    { "service":"Hair Color", "price":"60","time":"10"},
+    { "service":"Hair Style", "price":"50","time":"15"},
+    { "service":"Hair Exture", "price":"100","time":"35"},
+    { "service":"Hair Extension", "price":"350","time":"50"}
+  ]},
+
+{
+  "category":"Barber Shop",
+  "services":[
+    { "service":"Head Shave", "price":"85", "time":"25" },
+    { "service":"Razor Fade", "price":"110", "time":"15" },
+    { "service":"Beard Trim", "price":"50", "time":"10" },
+    { "service":"Mustache Trim", "price":"45", "time":"05" },
+    { "service":"Face Shave", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Nail Salon",
+  "services":[
+    { "service":"Polish", "price":"150", "time":"25" },
+    { "service":"Nail Art", "price":"250", "time":"15" },
+    { "service":"Manicure", "price":"550", "time":"25" },
+    { "service":"Pedicure", "price":"450", "time":"20" },
+    { "service":"Acrylic", "price":"345", "time":"35" }
+]},
+
+
+{ 
+  "category":"Eyebrows & Lashes",
+  "services":[
+    { "service":"Lash Extensions", "price":"85", "time":"25" },
+    { "service":"Lash Lift", "price":"110", "time":"15" },
+    { "service":"Tinting", "price":"50", "time":"10" },
+    { "service":"Trimming", "price":"45", "time":"05" },
+    { "service":"Flattering", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Massage",
+  "services":[
+    { "service":"Swedish", "price":"85", "time":"25" },
+    { "service":"Hot stone", "price":"110", "time":"15" },
+    { "service":"Aromatherapy", "price":"50", "time":"10" },
+    { "service":"Deep Tissue", "price":"45", "time":"05" },
+    { "service":"Trigger point", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Makeup Artist",
+  "services":[
+    { "service":"Fashion", "price":"85", "time":"25" },
+    { "service":"High Fashion", "price":"110", "time":"15" },
+    { "service":"Innovation Makeup", "price":"50", "time":"10" },
+    { "service":"Indivudual Styles", "price":"45", "time":"05" },
+    { "service":"Theater", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Daily Spa",
+  "services":[
+    { "service":"Mud Mask", "price":"85", "time":"25" },
+    { "service":"Herbal", "price":"110", "time":"15" },
+    { "service":"Paraffin", "price":"50", "time":"10" },
+    { "service":"Water Therapy", "price":"45", "time":"05" },
+    { "service":"Exfoliation", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Tattoo Shop",
+  "services":[
+    { "service":"Colored", "price":"85", "time":"25" },
+    { "service":"Permanent", "price":"110", "time":"15" },
+    { "service":"Black & White", "price":"50", "time":"10" },
+    { "service":"Realistic", "price":"45", "time":"05" },
+    { "service":"Crystal body", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Personal Trainer",
+  "services":[
+    { "service":"Special Effects", "price":"85", "time":"25" },
+    { "service":"Skincare Advice", "price":"110", "time":"15" },
+    { "service":"Beauty Products", "price":"50", "time":"10" },
+    { "service":"Beauty Tips", "price":"45", "time":"05" },
+    { "service":"Beauty Trends", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Wedding Makeup",
+  "services":[
+    { "service":"HD Makeup", "price":"85", "time":"25" },
+    { "service":"Airbrush Makeup", "price":"110", "time":"15" },
+    { "service":"Matte Makeup", "price":"50", "time":"10" },
+    { "service":"Mineral Makeup", "price":"45", "time":"05" },
+    { "service":"Smokey Makeup", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Medical Esthetician",
+  "services":[
+    { "service":"Brow Blading", "price":"85", "time":"25" },
+    { "service":"Hand Peel", "price":"110", "time":"15" },
+    { "service":"Glycolic Peel", "price":"50", "time":"10" },
+    { "service":"Anti-aging Peel", "price":"45", "time":"05" },
+    { "service":"Gentlewaves", "price":"45", "time":"10" }
+]},
+
+ {
+  "category":"Hair Removal",
+  "services":[
+    { "service":"Waxing", "price":"85", "time":"25" },
+    { "service":"Threading", "price":"110", "time":"15" },
+    { "service":"Soft Wax", "price":"50", "time":"10" },
+    { "service":"Chocolate Wax", "price":"45", "time":"05" },
+    { "service":"Sugar Wax", "price":"45", "time":"10" }
+]},
+
+{
+  "category":"Piercing",
+  "services":[
+    { "service":"Ear Piercing", "price":"85", "time":"25" },
+    { "service":"Nose Piercing", "price":"110", "time":"15" },
+    { "service":"Rook", "price":"50", "time":"10" },
+    { "service":"Helix", "price":"45", "time":"05" },
+    { "service":"Lobe", "price":"45", "time":"10" }
+]}
+]

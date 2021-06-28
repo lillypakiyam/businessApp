@@ -1,0 +1,48 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    background-color: forestgreen;
+}
+
+ion-toolbar {
+    --background: forestgreen;
+}
+
+.overylay {
+    position: relative;
+    top: 60%;
+    text-align: center;
+}
+
+ion-avatar {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+    border: 1px solid rgb(122, 199, 243);
+}
+
+.setting {
+    margin-top: 20px;
+}
+
+ion-card {
+    border-radius: 10px;
+    height: 150px; 
+    text-align: center;
+}
+ion-icon {
+    color: forestgreen;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+// ion-item {
+//   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+//   color: rgb(16, 16, 17);
+// }
+// ion-label {
+//   font: 20px;
+//   color: rgb(24, 21, 240);
+// }
